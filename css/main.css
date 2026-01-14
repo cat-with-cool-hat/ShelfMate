@@ -1,0 +1,280 @@
+* {
+    font-family: "Ubuntu", "Monaco", sans-serif;
+    color: black;
+}
+
+/* General */
+body {
+    margin: 1em;
+}
+
+button {
+    border-radius: 10px;
+    border: 2px solid lightgray;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    color: black;
+}
+
+h6 {
+    font-weight: bold;
+}
+
+select {
+    padding: 0.2em;
+    border-radius: 0.6em;
+    border: 2px solid lightgray;
+}
+
+textarea {
+    width: 70%;
+    height: 12em;
+    background-color: rgb(238, 237, 237);
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    /* place it somewhere fixed */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    border-top: 2px solid lightgray;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bottom-nav ul,
+.bottom-nav li,
+.bottom-nav a {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    align-items: center;
+}
+
+.router-link-active {
+    color: rgb(193, 151, 101);
+    font-weight: bold;
+}
+
+/* home view header */
+.homeview-header-div {
+    /*position: fixed;*/
+    background-color: white;
+
+}
+
+.homeview-heading {
+    font-weight: bold;
+}
+
+/* Logo Banner */
+.logo-banner {
+    width: 50%;
+    margin-bottom: 1em;
+}
+
+/* Searchbar */
+.searchbar-div {
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.searchbar-input {
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid lightgray;
+    padding: 0.25em;
+}
+
+.searchbar-button {
+    position: absolute;
+    right: 0.25em;
+    top: 0;
+    font-size: 1.25em;
+    background-color: transparent;
+    border: none;
+}
+
+.homeview-heading-span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+/* Book Selector */
+.book-scroll-div {
+    display: flex;
+}
+
+.book-selector {
+    margin-left: 15%;
+    margin-bottom: 5em;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.book-selector-item {
+    width: 50%;
+    padding: 0.5em;
+    /*height: 15em;*/
+}
+
+.book-selector-item-img {
+    width: 80%;
+    border-radius: 0.5em;
+}
+
+.book-list-menu {
+    position: fixed;
+    bottom: 40%;
+    left: 0;
+    padding: 0.5em;
+}
+
+.book-list-menu-item {
+    border: none;
+    background-color: white;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.book-list-menu-item.active {
+    border: 2px solid rgb(193, 151, 101);
+    /*color: rgb(193, 151, 101);
+    font-weight: bold;*/
+}
+
+/* Book Information */
+.book-information-div {
+    margin-top: 1em;
+    margin-bottom: 5em;
+}
+
+.back-button {
+    font-size: 2em;
+    font-weight: bolder;
+    border: none;
+    background-color: transparent;
+}
+
+.book-information-img {
+    width: 50%;
+    margin-bottom: 2em;
+    border-radius: 0.5em;
+}
+
+.book-information-title {
+    font-size: 1.5em;
+    font-weight: bold;
+
+}
+
+.book-information-author {
+    /*font-weight: bold;*/
+}
+
+.star {
+    color: gold;
+    font-size: 2em;
+}
+
+.book-information-genre-label-div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.dropdown-and-genre {
+    font-weight: bold;
+    border: 2px solid lightgray;
+    background-color: white;
+    border-radius: 2em;
+    line-height: 0.3em;
+    padding: 3px;
+    margin-bottom: 0.5em;
+}
+
+.book-information-notes-div {
+    background-color: rgb(238, 237, 237);
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+    padding: 1.5em;
+    height: 10em;
+    overflow-y: auto;
+}
+
+.book-information-facts-div {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.edit-button {
+    position: fixed;
+    bottom: 2.2em;
+    right: 0.5em;
+
+    font-size: 2em;
+    background-color: white;
+    border: 2px solid lightgray;
+}
+
+/* Book Information Input */
+
+.book-information-input-div {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 5em;
+}
+
+.book-information-input {
+    padding: 0.2em;
+    border-radius: 10px;
+    border: 2px solid lightgray;
+    margin-bottom: 0.5em;
+}
+
+.delete-button {
+    position: fixed;
+    bottom: 4.2em;
+    right: 0.5em;
+    width: 1.8em;
+
+    font-size: 2em;
+    background-color: white;
+    border: 2px solid lightgray;
+}
+
+.save-button {
+    position: fixed;
+    bottom: 2.2em;
+    right: 0.5em;
+
+    font-size: 2em;
+    background-color: white;
+    border-radius: 0.3em;
+    border: 2px solid lightgray;
+}
