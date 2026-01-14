@@ -10,7 +10,7 @@ const htmlTemplate = /*html*/`
 <div class="book-information-input-div">
     <label for="deleteButton" class="visually-hidden" >delete books</label>
     <button id="deleteButton" v-if="isEdit" type="button" @click="$emit('delete')" class="delete-button">&#128465;</button>
-    <form @submit="addNewBook"> <!-- @submit.prevent prevents refresh, but we want to have the form emptied -->
+    <form @submit.prevent="addNewBook"> <!-- @submit.prevent prevents refresh, but we want to have the form emptied -->
         <BookPhotoInput v-model="newBook.photo"/>
         <BookInformationStarsInput v-model="newBook.stars"/>
         <BookDropdownLabel v-model="newBook.label"/>
