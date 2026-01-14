@@ -3,7 +3,7 @@ import BookInformationInput from "../components/BookInformationInput.js";
 const htmlTemplate = /*html*/`
 <div>
   <label for="goBackButton" class="visually-hidden" >go back</label>
-  <router-link to="/"><button id="goBackButton" class="back-button">&#8617;</button></router-link><br> <!-- wenn man bei edit war, wäre es cool wenn man zurück zur BookView kommt -->
+  <router-link to="/"><button id="goBackButton" class="back-button">&larr;</button></router-link><br>
   <BookInformationInput v-model="newBook" :isEdit="isEdit" @delete="deleteBook"/>
 </div>
 `

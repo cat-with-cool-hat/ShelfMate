@@ -236,6 +236,7 @@ textarea {
     position: fixed;
     bottom: 2.2em;
     right: 0.5em;
+    width: 15%;
 
     font-size: 2em;
     background-color: white;
@@ -251,17 +252,22 @@ textarea {
 }
 
 .book-information-input {
+    width: 70%;
     padding: 0.2em;
     border-radius: 10px;
     border: 2px solid lightgray;
     margin-bottom: 0.5em;
 }
 
+.genre-select-div {
+    width: 70%;
+}
+
 .delete-button {
     position: fixed;
     bottom: 4.2em;
     right: 0.5em;
-    width: 1.8em;
+    width: 15%;
 
     font-size: 2em;
     background-color: white;
@@ -272,9 +278,10 @@ textarea {
     position: fixed;
     bottom: 2.2em;
     right: 0.5em;
+    width: 15%;
 
     font-size: 2em;
     background-color: white;
-    border-radius: 0.3em;
+    border-radius: 10px;
     border: 2px solid lightgray;
 }

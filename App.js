@@ -15,8 +15,8 @@ const htmlTemplate = /*html*/`
                     <router-link to="/stats" id="stats">&#128202; Stats</router-link>
                 </li>
                 <li>
-                    <label for="settings" class="visually-hidden">Settings</label>
-                    <router-link to="/settings" id="settings">&#128295; Settings</router-link>
+                    <label for="profile" class="visually-hidden">Profile</label>
+                    <router-link to="/profile" id="profile">&#128100; Profile</router-link>
                 </li>
             </ul>
         </nav>

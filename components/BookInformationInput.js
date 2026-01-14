@@ -13,11 +13,9 @@ const htmlTemplate = /*html*/`
     <form @submit="addNewBook"> <!-- @submit.prevent prevents refresh, but we want to have the form emptied -->
         <BookPhotoInput v-model="newBook.photo"/>
         <BookInformationStarsInput v-model="newBook.stars"/>
-        <div class="book-information-genre-label-div">
-            <BookDropdownLabel v-model="newBook.label"/>
-            <BookInformationGenreInput v-model="newBook.genre"/><br>
-        </div>
+        <BookDropdownLabel v-model="newBook.label"/>
         <div class="book-information-facts-div">
+            <BookInformationGenreInput v-model="newBook.genre"/><br>
             <BookInformationNotesInput v-model="newBook.notes" label="Notes" inputId="notes"/><br>
             <BookInformationFactInput v-model="newBook.title" label="Title" inputId="title"/><br>
             <BookInformationFactInput v-model="newBook.author" label="Author" inputId="author"/><br>
