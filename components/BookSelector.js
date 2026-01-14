@@ -14,6 +14,10 @@ export default {
         list: {
             type: String,
             default: "all"
+        },
+        search: {
+            type: String,
+            default: ""
         }
     },
     data() {
@@ -23,8 +27,17 @@ export default {
     },
     computed: {
         filteredBooks() {
-            if (this.list === 'all') return this.books;
-            return this.books.filter(b => b.label === this.list); // compare label of book with label of chosen list
+            let books = this.books;
+            if (this.list !== 'all') {
+                books = books.filter(b => b.label === this.list); // compare label of book with label of chosen list
+            }
+
+            if (this.search.trim() !== "") { // trim removes whitespace
+                const s = this.search.toLowerCase();
+                books = books.filter(b => b.title.toLowerCase().includes(s));
+            }
+
+            return books;
         }
     },
     created() {

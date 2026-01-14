@@ -10,7 +10,7 @@ const htmlTemplate = /*html*/`
 <div>
   <div class="homeview-header-div">
     <LogoBanner/>
-    <Searchbar/>
+    <Searchbar @update:search="search = $event" label="Search for a book:" searchPlaceholder="enter book title..."/>
     <span class="homeview-heading-span">
       <h4 v-if="currentFilter == 'all'" class="homeview-heading">All books</h4>
       <h4 v-else-if="currentFilter == 'currently'" class="homeview-heading">Currently reading</h4>
@@ -21,7 +21,7 @@ const htmlTemplate = /*html*/`
   </div>
   <div class="book-scroll-div">
     <BookListMenu v-model="currentFilter"/>
-    <BookSelector :list="currentFilter"/>
+    <BookSelector :list="currentFilter" :search="search"/>
   </div>
 </div>
 `
@@ -31,7 +31,8 @@ export default {
   components: { LogoBanner, AddNewBookButton, Searchbar, BookSelector, BookListMenu },
   data() {
     return {
-      currentFilter: 'all'
+      currentFilter: 'all',
+      search: ''
     };
   }
 };
