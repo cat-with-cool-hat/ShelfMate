@@ -18,8 +18,8 @@ export default {
   },
   computed: {
     bookCoverUrl() {
-      let path = this.book.photo ? this.book.photo : '/img/closed-book-icon.jpg';
-      return './' + path;
+      let path = this.book.photo ? this.book.photo : './img/closed-book-icon.jpg';
+      return path;
     }
   }
 };
