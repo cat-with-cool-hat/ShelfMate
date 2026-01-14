@@ -1,15 +1,12 @@
-# Task 1 submission notes
+# ShelfMate
 
-## App structure description
+## book reading tracker
 
 These are the most important files:
-* `views/AboutView.js`: shows a page of general info about the app
-* `views/HomeView.js`: initial view which shows welcome message
-* `views/HomeView.js`: initial view which shows welcome message
+* `views/HomeView.js`: initial view which shows your registered books
 
 ## Implementation details
 
 ## Difficulties and Learnings
-
 
 ## Screen reader tests
