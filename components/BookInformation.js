@@ -25,7 +25,7 @@ const htmlTemplate = /*html*/`
         <BookInformationFact :fact="book.price" type="Price"/>
     </div>
     <label for="editButton" class="visually-hidden" >edit</label>
-    <router-link :to="\`/bookinput/\${book.id}\`"><button id="editButton" class="edit-button">&#128221;</button></router-link> <!-- to do -->
+    <router-link :to="\`/bookinput/\${book.id}\`"><button id="editButton" class="edit-button">&#128221;</button></router-link>
 </div>
 `
 

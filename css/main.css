@@ -169,6 +169,7 @@ textarea {
 }
 
 .back-button {
+    margin-left: 0.5em;
     font-size: 2em;
     font-weight: bolder;
     border: none;
@@ -275,6 +276,7 @@ textarea {
     right: 0.5em;
     width: 15%;
     text-align: center;
+    z-index: 1000;
 
     font-size: 2em;
     background-color: white;
