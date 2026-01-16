@@ -1,6 +1,6 @@
 const htmlTemplate = /*html*/`
-<div class="dropdown-and-genre" v-for="g in genre" :key="g">
-  <p style="margin-bottom: 0px;padding: 8px;">{{ g }}</p>
+<div v-for="g in genre" :key="g">
+  <p class="genre">{{ g }}</p>
 </div>
 `
 

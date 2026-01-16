@@ -202,12 +202,22 @@ textarea {
     margin-bottom: 2em;
 }
 
-.dropdown-and-genre {
+.genre {
     font-weight: bold;
     border: 2px solid lightgray;
     background-color: white;
     border-radius: 2em;
-    line-height: 0.3em;
+    line-height: 10px;
+    padding: 8px;
+    margin-bottom: 0.5em;
+}
+
+.dropdown {
+    font-weight: bold;
+    border: 2px solid lightgray;
+    background-color: white;
+    border-radius: 2em;
+    line-height: 10px;
     padding: 3px;
     margin-bottom: 0.5em;
 }
