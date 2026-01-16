@@ -4,7 +4,9 @@ const htmlTemplate = /*html*/`
     <b>Upload a photo:</b><br>
     <img v-if="previewSrc" :src="previewSrc" id="preview" alt="preview of your book cover" width="50%"><br> <!-- v-bind:src oder :src -->
     <img v-if="!previewSrc" src="./img/uploadimage.png" alt="upload book symbol" width="50%"><br>
-    <input type="file" id="coverphoto" accept="image/*" name="coverphoto" @change="uploadBookPhoto">
+    <label for="coverphoto">
+        <input type="file" id="coverphoto" accept="image/*" name="coverphoto" @change="uploadBookPhoto" class="book-photo-input">
+    </label>
 </div>
 `
 
