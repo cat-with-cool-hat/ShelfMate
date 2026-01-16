@@ -4,11 +4,16 @@ const htmlTemplate = /*html*/`
 <div class="book-selector">
     <BookSelectorItem v-for="book in filteredBooks" :key="book.id" :book="book"/> <!-- v-for wie eine for each schleife -->
 </div>
-<div v-if="searchType === 'title' && filteredBooks.length === 0" style="text-align: center; max-width: 100%;">
-    <p>Hmm ... &#128566;</p>
-    <p>No books or authors found named <i>"{{ search }}"</i></p>
+<div v-if="searchType === 'title' && filteredBooks.length === 0" style="text-align: center; width: 100%; margin-top: 2em;">
+    <div v-if="search === ''">
+        <p>This list is empty.<br>Add some books first! &#129299;</p>
+    </div>
+    <div v-else>
+        <p>Hmm ... &#128566;</p>
+        <p>No books or authors found named <i>"{{ search }}"</i></p>
+    </div>
 </div>
-<div v-if="searchType === 'annotation' && filteredBooks.length === 0" style="text-align: center; max-width: 100%;">
+<div v-if="searchType === 'annotation' && filteredBooks.length === 0" style="text-align: center; width: 100%; margin-top: 2em;">
     <p>Hmm ... &#128566;</p>
     <p>No annotations found containing <i>"{{ search }}"</i></p>
 </div>

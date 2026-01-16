@@ -3,7 +3,7 @@ import BookInformationInput from "../components/BookInformationInput.js";
 const htmlTemplate = /*html*/`
 <div>
   <label for="goBackButton" class="visually-hidden" >go back</label>
-  <router-link to="/"><button id="goBackButton" class="back-button">&larr;</button></router-link><br>
+  <button @click="$router.go(-1)" id="goBackButton" class="back-button">&larr;</button><br>
   <BookInformationInput v-model="newBook" :isEdit="isEdit" @delete="deleteBook"/>
 </div>
 `
