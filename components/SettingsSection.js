@@ -10,7 +10,7 @@ const htmlTemplate = /*html*/`
     <summary>Search Annotations</summary>
     <form >
         <Searchbar @update:search="search = $event" label="Search annotations:" searchPlaceholder="enter annotation text..."/>
-        <BookSelector list="all" :search="search" searchType="annotation"/>
+        <BookSelector v-if="search.trim() !== ''" list="all" :search="search" searchType="annotation"/>
     </form>
 </details>
 <details class="settings-section-details">
