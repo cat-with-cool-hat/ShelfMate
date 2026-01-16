@@ -1,21 +1,25 @@
 import SettingsSwitch from "./SettingsSwitch.js";
 import Searchbar from "./Searchbar.js";
+import BookSelector from "../components/BookSelector.js";
 
 const htmlTemplate = /*html*/`
-
-<details>
+<div>
+    
+</div>
+<details class="settings-section-details" open>
     <summary>Search Annotations</summary>
     <form >
-        <Searchbar label="Search annotations:" searchPlaceholder="enter annotation text..."/>
+        <Searchbar @update:search="search = $event" label="Search annotations:" searchPlaceholder="enter annotation text..."/>
+        <BookSelector list="all" :search="search" searchType="annotation"/>
     </form>
 </details>
-<details>
+<details class="settings-section-details">
     <summary>App appearance</summary>
     <SettingsSwitch/><br>
     <SettingsSwitch/><br>
     <SettingsSwitch/>
 </details>
-<details>
+<details class="settings-section-details" style="margin-bottom: 5em;">
     <summary>FAQ</summary>
     <ul>
         <li>Question</li>
@@ -35,5 +39,10 @@ const htmlTemplate = /*html*/`
 `
 export default {
     template: htmlTemplate,
-    components: { SettingsSwitch, Searchbar }
+    components: { SettingsSwitch, Searchbar, BookSelector },
+    data() {
+        return {
+            search: ''
+        };
+    }
 };

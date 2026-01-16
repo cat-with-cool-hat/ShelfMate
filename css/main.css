@@ -40,7 +40,6 @@ textarea {
 
 /* Bottom Navigation */
 .bottom-nav {
-    /* place it somewhere fixed */
     position: fixed;
     bottom: 0;
     left: 0;
@@ -76,7 +75,6 @@ textarea {
 
 /* home view header */
 .homeview-header-div {
-    /*position: fixed;*/
     background-color: white;
 
 }
@@ -127,17 +125,18 @@ textarea {
 
 .book-selector {
     margin-left: 15%;
-    margin-bottom: 5em;
+    margin-bottom: 2em;
 
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    max-width: 100%;
 }
 
 .book-selector-item {
     width: 50%;
     padding: 0.5em;
-    /*height: 15em;*/
 }
 
 .book-selector-item-img {
@@ -161,8 +160,6 @@ textarea {
 
 .book-list-menu-item.active {
     border: 2px solid rgb(193, 151, 101);
-    /*color: rgb(193, 151, 101);
-    font-weight: bold;*/
 }
 
 /* Book Information */
@@ -287,4 +284,14 @@ textarea {
     background-color: white;
     border-radius: 10px;
     border: 2px solid lightgray;
+}
+
+/* Settings Section */
+.settings-section-details {
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: rgb(238, 237, 237);
+    border-radius: 10px;
+    margin-bottom: 1em;
 }

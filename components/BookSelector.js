@@ -4,6 +4,14 @@ const htmlTemplate = /*html*/`
 <div class="book-selector">
     <BookSelectorItem v-for="book in filteredBooks" :key="book.id" :book="book"/> <!-- v-for wie eine for each schleife -->
 </div>
+<div v-if="searchType === 'title' && filteredBooks.length === 0" style="text-align: center; max-width: 100%;">
+    <p>Hmm ... &#128566;</p>
+    <p>No books or authors found named <i>"{{ search }}"</i></p>
+</div>
+<div v-if="searchType === 'annotation' && filteredBooks.length === 0" style="text-align: center; max-width: 100%;">
+    <p>Hmm ... &#128566;</p>
+    <p>No annotations found containing <i>"{{ search }}"</i></p>
+</div>
 `
 const KEY_BOOK = "KEY_BOOK";
 
@@ -18,6 +26,10 @@ export default {
         search: {
             type: String,
             default: ""
+        },
+        searchType: {
+            type: String,
+            default: "title"
         }
     },
     data() {
@@ -28,13 +40,21 @@ export default {
     computed: {
         filteredBooks() {
             let books = this.books;
-            if (this.list !== 'all') {
-                books = books.filter(b => b.label === this.list); // compare label of book with label of chosen list
-            }
+            if (this.searchType === "title") { // search by book title
+                if (this.list !== 'all') {
+                    books = books.filter(b => b.label === this.list); // compare label of book with label of chosen list
+                }
 
-            if (this.search.trim() !== "") { // trim removes whitespace
-                const s = this.search.toLowerCase();
-                books = books.filter(b => b.title.toLowerCase().includes(s));
+                if (this.search.trim() !== "") { // trim removes whitespace
+                    const s = this.search.toLowerCase().trim();
+                    books = books.filter(b => b.title.toLowerCase().includes(s) || b.author.toLowerCase().includes(s));
+                }
+            }
+            else if (this.searchType === "annotation") { // search by annotation text
+                if (this.search.trim() !== "") { // trim removes whitespace
+                    const s = this.search.toLowerCase().trim();
+                    books = books.filter(b => b.notes.toLowerCase().includes(s));
+                }
             }
 
             return books;
