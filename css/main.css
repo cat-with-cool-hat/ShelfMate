@@ -258,6 +258,8 @@ textarea {
     height: 1px;
     opacity: 0;
     pointer-events: none;
+    outline: 10px solid blue;
+    /* prevent interaction */
 }
 
 .book-information-input-div {
