@@ -9,8 +9,10 @@ body {
 }
 
 button {
-    border-radius: 10px;
-    border: 2px solid lightgray;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    padding: 0;
 }
 
 ul {
@@ -119,6 +121,13 @@ textarea {
     margin-bottom: 1em;
 }
 
+#newBookButton {
+    font-size: 1.5em;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    padding: 0.1em 0.5em;
+}
+
 /* Book Selector */
 .book-scroll-div {
     display: flex;
@@ -150,6 +159,7 @@ textarea {
     bottom: 40%;
     left: 0;
     padding: 0.5em;
+    font-size: 1.5em;
 }
 
 .book-list-menu-item {
@@ -157,6 +167,8 @@ textarea {
     background-color: white;
     margin-top: 0.2em;
     margin-bottom: 0.2em;
+    padding: 0.2em;
+    border-radius: 10px;
 }
 
 .book-list-menu-item.active {
@@ -247,6 +259,7 @@ textarea {
 
     font-size: 2em;
     background-color: white;
+    border-radius: 10px;
     border: 2px solid lightgray;
 }
 
@@ -289,6 +302,7 @@ textarea {
 
     font-size: 2em;
     background-color: white;
+    border-radius: 10px;
     border: 2px solid lightgray;
 }
 

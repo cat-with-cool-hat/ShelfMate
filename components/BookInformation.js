@@ -11,8 +11,8 @@ const htmlTemplate = /*html*/`
     <div style="text-align: center;">
         <img :src="book.photo ? book.photo : '/img/closed-book-icon.jpg'" alt="book cover" class="book-information-img"/>
     </div>
-    <h2 class="book-information-title">{{ book.title }}</h2>
-    <h3 class="book-information-author">{{ book.author }}</h3>
+    <h2 class="book-information-title" tabindex="0">{{ book.title }}</h2>
+    <h3 class="book-information-author" tabindex="0">{{ book.author }}</h3>
     <BookInformationStars :stars="book.stars"/>
     <div class="book-information-genre-label-div">
         <BookDropdownLabel :modelValue="book.label"/>

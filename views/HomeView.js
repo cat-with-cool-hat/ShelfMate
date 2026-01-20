@@ -12,10 +12,10 @@ const htmlTemplate = /*html*/`
     <LogoBanner/>
     <Searchbar @update:search="search = $event" label="Search for a book:" searchPlaceholder="enter book title or author..."/>
     <span class="homeview-heading-span">
-      <h4 v-if="currentFilter == 'all'" class="homeview-heading">All books</h4>
-      <h4 v-else-if="currentFilter == 'currently'" class="homeview-heading">Currently reading</h4>
-      <h4 v-else-if="currentFilter == 'wanting'" class="homeview-heading">Wanting to read</h4>
-      <h4 v-else-if="currentFilter == 'done'" class="homeview-heading">Done reading</h4>
+      <h4 v-if="currentFilter == 'all'" class="homeview-heading" tabindex="0">All books</h4>
+      <h4 v-else-if="currentFilter == 'currently'" class="homeview-heading" tabindex="0">Currently reading</h4>
+      <h4 v-else-if="currentFilter == 'wanting'" class="homeview-heading" tabindex="0">Wanting to read</h4>
+      <h4 v-else-if="currentFilter == 'done'" class="homeview-heading" tabindex="0">Done reading</h4>
       <AddNewBookButton/>
     </span>
   </div>

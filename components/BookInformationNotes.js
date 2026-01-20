@@ -1,7 +1,7 @@
 const htmlTemplate = /*html*/`
-<h6>Notes:</h6>
+<h6 tabindex="0">Notes:</h6>
 <div class="book-information-notes-div">
-  <p>{{ notes }}</p>
+  <p tabindex="0">{{ notes }}</p>
 </div>
 `
 

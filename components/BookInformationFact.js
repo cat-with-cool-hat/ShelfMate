@@ -1,6 +1,6 @@
 const htmlTemplate = /*html*/`
-<h6>{{ type }}:</h6>
-<p>{{ fact }}</p>
+<h6 tabindex="0">{{ type }}:</h6>
+<p tabindex="0">{{ fact }}</p>
 `
 
 export default {

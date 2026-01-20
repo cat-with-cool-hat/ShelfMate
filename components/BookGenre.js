@@ -1,6 +1,6 @@
 const htmlTemplate = /*html*/`
 <div v-for="g in genre" :key="g">
-  <p class="genre">{{ g }}</p>
+  <p class="genre" tabindex="0">{{ g }}</p>
 </div>
 `
 

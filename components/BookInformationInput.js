@@ -20,7 +20,7 @@ const htmlTemplate = /*html*/`
             <BookInformationFactInput v-model="newBook.title" label="Title" inputId="title"/><br>
             <BookInformationFactInput v-model="newBook.author" label="Author" inputId="author"/><br>
             <BookInformationFactInput v-model="newBook.page" label="Page" inputId="page"/><br>
-            <BookInformationFactInput v-model="newBook.location" label="Location" inputId="location"/><br>
+            <BookInformationFactInput v-model="newBook.location" label="Stored here" inputId="location"/><br>
             <BookInformationFactInput v-model="newBook.price" label="Price" inputId="price"/><br>
         </div>
         <input type="submit" value="&#128190;" class="save-button">

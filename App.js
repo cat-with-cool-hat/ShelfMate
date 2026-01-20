@@ -8,15 +8,15 @@ const htmlTemplate = /*html*/`
             <ul>
                 <li>
                     <label for="home" class="visually-hidden">Home</label>
-                    <router-link to="/" id="home">&#127968; Home</router-link>
+                    <router-link to="/" id="home" tabindex="0">&#127968; Home</router-link>
                 </li>
                 <li>
                     <label for="stats" class="visually-hidden">Stats</label>
-                    <router-link to="/stats" id="stats">&#128202; Stats</router-link>
+                    <router-link to="/stats" id="stats" tabindex="0">&#128202; Stats</router-link>
                 </li>
                 <li>
-                    <label for="profile" class="visually-hidden">Profile</label>
-                    <router-link to="/profile" id="profile">&#128100; Profile</router-link>
+                    <label for="profile" class="visually-hidden">Notes</label>
+                    <router-link to="/profile" id="profile" tabindex="0">&#128211; Notes</router-link>
                 </li>
             </ul>
         </nav>
