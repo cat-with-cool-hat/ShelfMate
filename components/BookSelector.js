@@ -6,16 +6,16 @@ const htmlTemplate = /*html*/`
 </div>
 <div v-if="searchType === 'title' && filteredBooks.length === 0" style="text-align: center; width: 100%; margin-top: 2em;">
     <div v-if="search === ''">
-        <p>This list is empty.<br>Add some books first! &#129299;</p>
+        <p tabindex="0">This list is empty.<br>Add some books first! &#129299;</p>
     </div>
     <div v-else>
-        <p>Hmm ... &#128566;</p>
-        <p>No books or authors found named <i>"{{ search }}"</i></p>
+        <p tabindex="0">Hmm ... &#128566;</p>
+        <p tabindex="0">No books or authors found named <i>"{{ search }}"</i></p>
     </div>
 </div>
 <div v-if="searchType === 'annotation' && filteredBooks.length === 0" style="text-align: center; width: 100%; margin-top: 2em;">
-    <p>Hmm ... &#128566;</p>
-    <p>No annotations found containing <i>"{{ search }}"</i></p>
+    <p tabindex="0">Hmm ... &#128566;</p>
+    <p tabindex="0">No notes found containing <i>"{{ search }}"</i></p>
 </div>
 `
 const KEY_BOOK = "KEY_BOOK";
